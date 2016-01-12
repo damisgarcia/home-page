@@ -1,0 +1,26 @@
+{
+  "name": "home-page",
+  "homepage": "https://github.com/damisgarcia/home-page",
+  "authors": [
+    "damisgarcia <damisgarcia@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular-bootstrap": "~1.0.3",
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.6",
+    "flexboxgrid": "~6.3.0",
+    "flexboxgrid-sass": "~8.0.0",
+    "angular-ui-router": "~0.2.15"
+  }
+}
