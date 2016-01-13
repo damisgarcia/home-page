@@ -11,8 +11,8 @@
 ">
 
   <link rel="stylesheet" href="/css/main.css">  
-  <link rel="canonical" href="http://yourdomain.com/about/">
-  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/about/">
+  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://localhost:4000/feed.xml">
 </head>
 
 
@@ -43,7 +43,29 @@
             
           
             
+            <li>
+              <a class="page-link" href="/views/categories.html"></a>
+            </li>
+            
           
+            
+            <li>
+              <a class="page-link" href="/feed.xml"></a>
+            </li>
+            
+          
+            
+          
+            
+            <li>
+              <a class="page-link" href="/"></a>
+            </li>
+            
+          
+            
+            <li>
+              <a class="page-link" href="/css/main.css"></a>
+            </li>
             
           
             
@@ -56,7 +78,63 @@
 
 
     <div class="page-content container">
-      <article class="post">
+      <div class="row around-xs">
+
+        <div class="col-xs-2">
+          <!-- Pages -->
+<ul class="list-unstyled">
+  
+    
+    <li>
+      <a class="page-link" href="/about/">About</a>
+    </li>
+    
+  
+    
+    <li>
+      <a class="page-link" href="/views/categories.html"></a>
+    </li>
+    
+  
+    
+    <li>
+      <a class="page-link" href="/feed.xml"></a>
+    </li>
+    
+  
+    
+  
+    
+    <li>
+      <a class="page-link" href="/"></a>
+    </li>
+    
+  
+    
+    <li>
+      <a class="page-link" href="/css/main.css"></a>
+    </li>
+    
+  
+    
+  
+  <li class="divider"></li>
+  <li>
+    <a href="/blog">Blog</a>
+    <ul>
+      
+        <li><a style="text-transform:capitalize;" href="/#/categories/angular" name="angular">angular</a></li>
+      
+        <li><a style="text-transform:capitalize;" href="/#/categories/ruby" name="ruby">ruby</a></li>
+      
+    </ul>
+  </li>
+</ul>
+
+        </div>
+
+        <div class="col-xs-9">
+          <article class="post">
 
   <header class="post-header">
     <h1 class="post-title">About</h1>
@@ -81,6 +159,9 @@
 
 </article>
 
+        </div>
+
+      </div>
     </div>
 
     <footer class="site-footer container">
@@ -117,11 +198,6 @@
     </div>
 
 </footer>
-
-    <script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
   </body>
 

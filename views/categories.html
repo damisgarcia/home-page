@@ -1,0 +1,12 @@
+---
+layout: none
+---
+<div class="category-archive">
+  <h1 class="category-title">{{ 'categories.posts[0].category' | angular }}</h1>
+  <article class="category-wrapper" ng-repeat="item in categories.posts">
+    <header class="post-header">
+      <h3><a href='{{'item.link' | angular }}'>{{ 'item.title' | angular }}</a></h3>
+      <time class="post-meta" ng-bind="categories.formatDate(item.pubDate) | date:'MMMM dd, yyyy'"></time>
+    </header>
+  </article>
+</div>

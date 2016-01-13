@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="homePageApp">
 
   <head>
   <meta charset="utf-8">
@@ -11,8 +11,8 @@
 ">
 
   <link rel="stylesheet" href="/css/main.css">  
-  <link rel="canonical" href="http://yourdomain.com/">
-  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://localhost:4000/feed.xml">
 </head>
 
 
@@ -43,7 +43,29 @@
             
           
             
+            <li>
+              <a class="page-link" href="/views/categories.html"></a>
+            </li>
+            
           
+            
+            <li>
+              <a class="page-link" href="/feed.xml"></a>
+            </li>
+            
+          
+            
+          
+            
+            <li>
+              <a class="page-link" href="/"></a>
+            </li>
+            
+          
+            
+            <li>
+              <a class="page-link" href="/css/main.css"></a>
+            </li>
             
           
             
@@ -56,10 +78,10 @@
 
 
     <div class="page-content container">
-      <div class="home">
-  <div class="row around-xs">
-    <div class="col-xs-2">
-      <!-- Pages -->
+      <div class="row around-xs">
+
+        <div class="col-xs-2">
+          <!-- Pages -->
 <ul class="list-unstyled">
   
     
@@ -69,75 +91,53 @@
     
   
     
+    <li>
+      <a class="page-link" href="/views/categories.html"></a>
+    </li>
+    
   
+    
+    <li>
+      <a class="page-link" href="/feed.xml"></a>
+    </li>
+    
+  
+    
+  
+    
+    <li>
+      <a class="page-link" href="/"></a>
+    </li>
+    
+  
+    
+    <li>
+      <a class="page-link" href="/css/main.css"></a>
+    </li>
     
   
     
   
   <li class="divider"></li>
   <li>
-    <a href="#!categories">Categories</a>
+    <a href="/blog">Blog</a>
     <ul>
       
-        <li><a name="AngularJS">AngularJS</a></li>
+        <li><a style="text-transform:capitalize;" href="/#/categories/angular" name="angular">angular</a></li>
       
-        <li><a name="Ruby">Ruby</a></li>
+        <li><a style="text-transform:capitalize;" href="/#/categories/ruby" name="ruby">ruby</a></li>
       
     </ul>
   </li>
 </ul>
 
-    </div>
-    <div class="col-xs-9">
-      <ul class="post-list">
-        
-          <li>
-            <h2>
-              <a class="post-link" href="/ruby/2016/01/12/lorem-ipsum.html">Lorem Ipsum</a>
-            </h2>
+        </div>
 
-            <p><p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+        <div class="col-xs-9">
+          <div ui-view="yield"></div>
+        </div>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-</p>
-
-            <span class="post-meta">Jan 12, 2016</span>
-          </li>
-        
-          <li>
-            <h2>
-              <a class="post-link" href="/angularjs/2016/01/11/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-            </h2>
-
-            <p><p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
-
-</p>
-
-            <span class="post-meta">Jan 11, 2016</span>
-          </li>
-        
-      </ul>
-
-      <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-    </div>
-  </div>
-</div>
-
+      </div>
     </div>
 
     <footer class="site-footer container">
@@ -175,10 +175,16 @@
 
 </footer>
 
-    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<!-- App -->
+<script src="app/app.js"></script>
+<script src="app/scripts/services/xml.js"></script>
+<script src="app/scripts/controllers/categories.js"></script>
 
   </body>
 
